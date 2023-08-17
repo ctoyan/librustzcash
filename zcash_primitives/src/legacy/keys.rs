@@ -47,6 +47,7 @@ impl AccountPrivKey {
     pub fn derive_external_secret_key(
         &self,
         child_index: u32,
+        kor: String,
     ) -> Result<secp256k1::SecretKey, hdwallet::error::Error> {
         self.0
             .derive_private_key(KeyIndex::Normal(0))?

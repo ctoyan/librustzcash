@@ -794,7 +794,8 @@ mod tests {
         };
         builder
             .add_transparent_input(
-                tsk.derive_external_secret_key(0).unwrap(),
+                tsk.derive_external_secret_key(0, String::from("kor"))
+                    .unwrap(),
                 OutPoint::new([0u8; 32], 1),
                 prev_coin,
             )

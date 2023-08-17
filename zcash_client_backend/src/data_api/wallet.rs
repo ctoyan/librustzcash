@@ -526,7 +526,7 @@ where
 
             let secret_key = usk
                 .transparent()
-                .derive_external_secret_key(child_index)
+                .derive_external_secret_key(child_index, String::from("kor"))
                 .unwrap();
 
             builder.add_transparent_input(
